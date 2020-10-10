@@ -9,8 +9,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  webview_flutter: ^0.3.22+1
-  mime: ^0.9.6+3
+  webview_flutter: ^1.0.1
+  mime: ^0.9.7
 
 dev_dependencies:
   flutter_test:
