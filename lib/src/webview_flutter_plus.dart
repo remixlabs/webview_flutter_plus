@@ -271,6 +271,7 @@ class WebViewPlusController implements WebViewController {
 
   @override
   Future<void> loadUrl(String url, {Map<String, String> headers}) {
+    print('webview_flutter_plus: asked to load url $url (port $_port)');
     bool _validURL = Uri.parse(url).isAbsolute;
     if (_validURL) {
       return _webViewController.loadUrl(url, headers: headers);
@@ -295,6 +296,7 @@ class WebViewPlusController implements WebViewController {
   }
 
   Future<void> _loadAsset(String uri, {Map<String, String> headers}) async {
+    print('webview_flutter_plus: loading local asset $uri (port $_port)');
     return this.loadUrl('http://localhost:$_port/$uri', headers: headers);
   }
 }

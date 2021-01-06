@@ -10,8 +10,9 @@ class WebviewPlusServer {
   ///Closes the server.
   static Future<void> close() async {
     if (_server != null) {
+      print(
+          'webview_flutter_plus: server stopped on http://localhost:${_server.port}');
       await _server.close(force: true);
-      //  print('Server running on http://localhost:$_port closed');
       _server = null;
     }
   }
@@ -21,8 +22,9 @@ class WebviewPlusServer {
     var completer = new Completer<int>();
     runZoned(() {
       HttpServer.bind('localhost', 0, shared: true).then((server) {
-        //print('Server running on http://localhost:' + 5353.toString());
         _server = server;
+        print(
+            'webview_flutter_plus: server started on http://localhost:${_server.port}');
         server.listen((HttpRequest httpRequest) async {
           var body = List<int>();
           var path = httpRequest.requestedUri.path;
