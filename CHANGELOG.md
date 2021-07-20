@@ -1,3 +1,18 @@
+## [0.2.2] - May 25, 2021
+* WebView requires at least Android 19 if you are using hybrid composition (flutter/issues/59894).
+
+## [0.2.1+1] - Apr 20, 2021
+* Minor Code Fixes.
+
+## [0.2.1] - Apr 13, 2021
+* Minor API Changes.
+
+## [0.2.0] - Apr 10, 2021
+* Migration to null-safety.
+
+## [0.1.1+10] - Oct 10, 2020
+* Dependencies upgrade.
+
 ## [0.1.1+9] - Jul 5, 2020
 * Minor changes.
 
